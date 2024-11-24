@@ -30,6 +30,7 @@ public class ConfirmationPage extends AbstractComponent{
 	{
 	String orderplaced=getConfirmationMessage.getText();
 	System.out.println("o");
+	System.out.println("o1");
 	return orderplaced;
 	}
 }
