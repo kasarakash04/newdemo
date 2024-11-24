@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 import wizehub.AbstractComponents.AbstractComponent;
 
 public class ConfirmationPage extends AbstractComponent{
@@ -28,6 +29,8 @@ public class ConfirmationPage extends AbstractComponent{
 	public String isOrderPlaced()
 	{
 	String orderplaced=getConfirmationMessage.getText();
+	System.out.println("o");
+	System.out.println("o1");
 	return orderplaced;
 	}
 }
