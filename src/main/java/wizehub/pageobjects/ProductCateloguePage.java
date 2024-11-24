@@ -67,6 +67,13 @@ public class ProductCateloguePage extends AbstractComponent {
 		waitForElementToDisappear(loader);
 	}
 	
+	public void addProductToCart1(String productName)
+	{
+		WebElement Prod=getProductByName(productName);
+		Prod.findElement(addToCartBy).click();	//we cannot apply pageFactory within element 
+		waitForElementToAppear(toastMessageBy);
+		waitForElementToDisappear(loader);
+	}
 	
 
 	

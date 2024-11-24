@@ -36,6 +36,18 @@ public class ErrorValidationsTest extends BaseTest {
 
 	}
 
+
+	@Test(groups = { "ErrorHandling" },testName = "this is my test name to be in extent report", retryAnalyzer = Retry.class)
+	public void LoginErrorValidations() throws IOException {
+
+		// test with wrong mail and password
+
+		ProductCateloguePage productCateloguePage = landingPage.loginApplication("kasarakash14@gmail.com", "Akash@123");
+		// ctrl+shift+p and run focus- emulate focused page and inspect after entering
+		// sources-> pause in right corner when toast appeared->
+		Assert.assertEquals(landingPage.getErrorMessage(), "Incorrect email or password.");
+
+	} 
 	@Test(testName = "this is my test name to be in extent report")
 	public void productErrorValidation() throws IOException, InterruptedException {
 
